@@ -1,0 +1,40 @@
+.toggle-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  color: var(--soft-gray);
+  font-weight: bold;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  font-family: var(--baseFont);
+}
+input {
+  display: none;
+}
+label {
+  display: block;
+  inline-size: 3.5rem;
+  block-size: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+  transition: opacity 0.3s ease-in-out;
+}
+label::before {
+  position: absolute;
+  content: '';
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  background-color: var(--just-white);
+  border-radius: 50%;
+  inset-block-start: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.3s ease-in-out;
+}
+input:checked + label::before {
+  transform: translate(-100%, -50%);
+}
+label:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

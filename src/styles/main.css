@@ -1,0 +1,59 @@
+@import url('./components/card.css');
+@import url('./components/button.css');
+@import url('./components/toggle.css');
+
+:root {
+  --bg-color: hsl(240, 78%, 98%);
+  --just-white: #fff;
+  --shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+  --bg-btn-gradient: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+  --soft-gray: #6e728e;
+  --just-dark: #4a4d60;
+  --just-purple: #6d72de;
+  --baseFont: 'Montserrat', sans-serif;
+  --mobile-optionsBold: bold 0.9375rem / 1.75rem var(--baseFont);
+  --mobile-headlineBold: bold 4.5rem / 4.4375rem var(--baseFont);
+  --mobile-buttonBold: bold 0.8125rem / 0.9375rem var(--baseFont);
+  --mobile-smallBold: bold 1.125rem / 1.75rem var(--baseFont);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--baseFont);
+  background-color: var(--bg-color);
+  min-block-size: 100vh;
+}
+.wrapper {
+  max-inline-size: 1050px;
+  margin: auto;
+}
+.main {
+  padding-inline: 1.5rem;
+}
+.main-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  padding-block: 3rem;
+}
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: var(--soft-gray);
+}
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 350px);
+  }
+}
