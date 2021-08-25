@@ -24,7 +24,6 @@ function renderPricing(typePricing = {}) {
 }
 
 function togglePricing(isChecked = false) {
-  console.log(isChecked);
   if (!isChecked) {
     renderPricing(tablePricing.monthly);
     return;
